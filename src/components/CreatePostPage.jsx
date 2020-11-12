@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import style from './css/login.module.css'
+import style from './css/modal.module.css'
 import { Box, Button, TextField } from '@material-ui/core';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';

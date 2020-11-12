@@ -56,13 +56,14 @@ export const {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched
 // export const incrementAsync = amount => dispatch => {
-export const initialAuth = id => dispatch => {
+export const initialAuth = id => dispatch => { 
   let data = users.filter(e => e.id === id)
   dispatch(setUserRole(data[0].role))
-  dispatch(setUserLogin(data[0].email))
+  dispatch(setUserLogin(data[0].login))
   dispatch(userAuthStatus(true))
   dispatch(disableLoading())
 }
+
 export const deletePost = id => dispatch => {
   fetch(`http://localhost:8080/posts/${id}`, { method: 'DELETE' })
     .then(response => response.json())
@@ -70,6 +71,7 @@ export const deletePost = id => dispatch => {
       dispatch(getRefreshedPost())
     })
 }
+
 export const approvePost = (name, img, post_text, date, id) => dispatch => {
   let data = {
     name,
