@@ -1,11 +1,12 @@
 import React, { useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { Box } from '@material-ui/core';
+import styles from './css/HeaderStyles'
 import {
   selectLoginModal,
   selectUserIsAuth,
@@ -21,24 +22,7 @@ import {
 } from '../Reducers/loginReducer';
 import { useSelector, useDispatch } from 'react-redux';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  titleWrap: {
-    display: 'flex',
-    flexGrow: 1,
-  },
-  title: {
-    marginRight: "15px"
-  }
-}));
-
-export default function ButtonAppBar() {
-  const classes = useStyles();
+const Header = ({ classes }) => {
   const dispatch = useDispatch()
   const userIsAuth = useSelector(selectUserIsAuth)
   const LoginModal = useSelector(selectLoginModal)
@@ -86,3 +70,5 @@ export default function ButtonAppBar() {
     </div>
   );
 }
+
+export default withStyles(styles)(Header)
