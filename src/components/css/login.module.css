@@ -1,0 +1,38 @@
+a {
+    text-decoration: none;
+}
+
+.login {
+    width: 350px;
+    height: 300px;
+    display: flex;
+    padding-top: 70px;
+    justify-content: center;
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+}
+.post {
+    width: 350px;
+    height: 380px;
+    display: flex;
+    padding-top: 70px;
+    justify-content: center;
+    /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
+}
+
+.loginWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.login:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
